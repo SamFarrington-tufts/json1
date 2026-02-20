@@ -11,7 +11,7 @@
         #json_data{margin: 30px;}
         #song_info{margin: 30px;}
         #song_title{font-size: 20px; font-weight: 700;}
-        #song{margin: 25px;}
+        #song{margin: 20px 0 30px 15px;}
 
     </style>
     <meta charset="utf-8">
@@ -26,9 +26,6 @@
 
     <script>
         $.get("songs.json", function(data){
-            // displays the json data on the page
-            j_str = JSON.stringify(data);
-            document.getElementById("json_data").innerHTML = j_str;
 
             // puts each song from the json file in its own div for formatting
             // on the page
