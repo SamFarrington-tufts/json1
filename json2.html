@@ -30,12 +30,14 @@
             j_str = JSON.stringify(data);
             document.getElementById("json_data").innerHTML = j_str;
 
+            // puts each song from the json file in its own div for formatting
+            // on the page
             str = "";
-            data.songs.forEach(function(song){
+            data.songList.forEach(function(song){
                 str += "<div id = 'song'>"
-                    + "<div id = song_title>" + song.title + "</div>"
+                    + "<div id = 'song_title'>" + song.title + "</div>"
                     + "Artist: " + song.artist + "</br>"
-                    + "Genre: " + song.genres.join(", ") + "</br>"
+                    + "Genre: " + song.genre.join(", ") + "</br>"
                     + "Released: " + song.year + "</div>"
             });
 
