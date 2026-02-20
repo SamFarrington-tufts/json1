@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style type = "text/css">
+        body{font-family: 'Roboto', sans-serif;}
+        #json_data{margin: 30px;}
+
+    </style>
+    <meta charset="utf-8">
+    <title>Problem 2</title>
+</head>
+
+<body>
+    <h1>Problem 2</h1>
+    <div id = "json_data"></div>
+    <div id = "song_info"></div>
+
+    <script>
+        $.get("songs.json", function(data){
+            // displays the json data on the page
+            j_str = JSON.stringify(data);
+            document.getElementById("json_data").innerHTML = j_str;
+
+        });
+    </script>
+
+</body>
+</html>

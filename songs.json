@@ -1,0 +1,51 @@
+{
+    "songList" : [
+        { "title" : "Seven Nation Army", 
+            "artist" : "The White Stripes",
+            "year" : 2003,
+            "genre" : ["rock", "alternative"]
+        }, 
+
+        { "title" : "Since U Been Gone", 
+            "artist" : "Kelley Clarkson",
+            "year" : 2004,
+            "genre" : ["rock", "pop"]
+        }, 
+
+        { "title" : "Umbrella", 
+            "artist" : "Rihanna",
+            "year" : 2007,
+            "genre" : ["pop", "R&B"]
+        }, 
+
+        { "title" : "Hey Ya!", 
+            "artist" : "Outkast",
+            "year" : 2003,
+            "genre" : ["pop"]
+        }, 
+
+        { "title" : "Rolling in the Deep", 
+            "artist" : "Adele",
+            "year" : 2010,
+            "genre" : ["pop"]
+        }, 
+
+        { "title" : "Radioactive", 
+            "artist" : "Imagine Dragons",
+            "year" : 2012,
+            "genre" : ["rock", "alternative"]
+        }, 
+
+        { "title" : "Shut Up and Dance", 
+            "artist" : "WALK THE MOON",
+            "year" : 2014,
+            "genre" : ["rock"]
+        },
+
+        { "title" : "Dance Monkey", 
+            "artist" : "Tones and I",
+            "year" : 2019,
+            "genre" : ["pop"]
+        }
+    ]
+}
