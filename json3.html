@@ -5,6 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
     <style type = "text/css">
         body{font-family: 'Roboto', sans-serif;}
@@ -12,10 +13,40 @@
     </style>
     <meta charset="utf-8">
     <title>Problem 3</title>
+
 </head>
 
 <body>
     <h1>Problem 3</h1>
+
+    <select id = "selectGenre"></select>
+    <input type="button" value="Filter" id="btnFilter"> 
+    <div id = "result"></div>
+
+     <script>
+        $.get("songs.json", function(data){
+            // Creates an array to hold all genres of music. No repetition
+            let genres = [];
+            data.songList.forEach(function(song){
+                song.genres.forEach(function(g){
+                    if(!genres.includes(g)){
+                        genres.push(g);
+                    }
+                });
+            });
+
+            // Populates the dropdown list with all genres
+            let dropList = document.getElementById("selectGenre")
+            genres.forEach(function(g){
+                let opt = document.createElement("option");
+                opt.value = g;
+                op.text = g;
+                dropList.append(opt);
+            });
+
+
+        });
+    </script>
 
 
 </body>
