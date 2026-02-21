@@ -10,6 +10,8 @@
     <style type = "text/css">
         body{font-family: 'Roboto', sans-serif;}
         #selectGenre{padding: 10px; margin: 20px;}
+        #result{padding: 10px; margin: 20px;}
+        #result ul{margin-top: 10px;}
 
     </style>
     <meta charset="utf-8">
@@ -44,6 +46,24 @@
                 opt.text = g;
                 dropList.append(opt);
             });
+
+            // Adds an event listener and function to the filter button
+            document.getElementById("btnFilter").addEventListener("click", function(){
+                // Gets the selected genre and stores it in a variable
+                let selected = document.getElementById("selectGenre").value;
+
+                // If the song is in the selected genre, creates a list element
+                // with the song title and adds it to a ul
+                let out = "<ul>";
+                data.songList.forEach(function(song){
+                    if(song.genre.includes(selected)){
+                        out += "<li>" + song.title + "</li>";
+                    }
+                });
+                out += "</ul>";
+
+                document.getElementById("result").innerHTML = out;
+            })
 
 
         });
