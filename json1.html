@@ -19,7 +19,8 @@
     <div id="answer"></div>
 
     <script>
-        songList = [
+        songs = {
+          songList : [
             { "title" : "Seven Nation Army", 
               "artist" : "The White Stripes",
               "year" : 2003,
@@ -66,13 +67,14 @@
               "artist" : "Tones and I",
               "year" : 2019,
               "genre" : ["pop"]
-            }
-    ];
+            }   
+          ]
+        }
 
     // converts the json object into a string
-    songs = JSON.stringify(songList);
+    allSongs = JSON.stringify(songs);
 
-    document.getElementById("answer").innerHTML = songs;
+    document.getElementById("answer").innerHTML = allSongs;
     </script>
 
 
